@@ -58,10 +58,16 @@ static void BM_Axpy(benchmark::State &state, AxpyFn<T> fn)
 // BENCHMARK_CAPTURE(BM_Axpy<double>, v0, axpy_v0)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 23);
 
 /* ----------------- 注册：float 版本 ----------------- */
-BENCHMARK_CAPTURE(BM_Axpy<float>, v0, axpy_v0)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+// BENCHMARK_CAPTURE(BM_Axpy<float>, v0, axpy_v0)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
 
-BENCHMARK_CAPTURE(BM_Axpy<float>, v1, axpy_v1)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+// BENCHMARK_CAPTURE(BM_Axpy<float>, v1, axpy_v1)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
 
-BENCHMARK_CAPTURE(BM_Axpy<float>, v2, axpy_v2)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+// BENCHMARK_CAPTURE(BM_Axpy<float>, v2, axpy_v2)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+
+BENCHMARK_CAPTURE(BM_Axpy<float>, v3, axpy_v3)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+
+BENCHMARK_CAPTURE(BM_Axpy<float>, v4, axpy_v4)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
+
+BENCHMARK_CAPTURE(BM_Axpy<float>, v5, axpy_v5)->RangeMultiplier(1 << 2)->Range(1 << 10, 1 << 24);
 
 BENCHMARK_MAIN();

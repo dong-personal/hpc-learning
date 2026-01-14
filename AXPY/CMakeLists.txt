@@ -17,7 +17,7 @@ add_executable(axpy_bench axpy_bench.cc)
 add_library(axpy_v0 STATIC axpy_v0.cc axpy.h)
 target_compile_options(axpy_v0 PRIVATE -O3 -mavx2 -mfma -ffast-math)
 add_library(axpy_v1 STATIC axpy_v1.cc axpy.h)
-target_compile_options(axpy_v1 PRIVATE -mavx2 -mfma)
+target_compile_options(axpy_v1 PRIVATE -mavx2 -mfma -masm=intel)
 
 # benchmark::benchmark 会自动带上需要的依赖（libbenchmark, pthread 等）
 target_link_libraries(axpy_bench PRIVATE benchmark::benchmark axpy_v0 axpy_v1)
